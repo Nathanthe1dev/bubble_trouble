@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Bubble Trouble: an interactive Bubble Sort game and visualizer.">
+	<title>Bubble Trouble — Bubble Sort Visualizer</title>
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔵</text></svg>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chewy&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="module" src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Bubble Trouble</h1>
+		<p>Watch bubble sort bring a jumble of numbers into order.</p>
+	</header>
+
+	<main>
+		<section aria-labelledby="controls-heading">
+			<h2 id="controls-heading">Controls</h2>
+			<div class="controls">
+				<button id="start-button" type="button">Start</button>
+				<button id="pause-button" type="button" disabled>Pause</button>
+				<button id="resume-button" type="button" disabled>Resume</button>
+				<button id="reset-button" type="button">Reset</button>
+				<button id="shuffle-button" type="button">Shuffle</button>
+				<div class="size-control">
+					<label for="array-size">Array size: <output id="array-size-value" for="array-size">20</output></label>
+					<input id="array-size" name="array-size" type="range" min="5" max="50" value="20">
+				</div>
+			</div>
+		</section>
+
+		<section aria-labelledby="arena-heading">
+			<h2 id="arena-heading">Sorting arena</h2>
+			<ol id="arena" class="arena" aria-label="Bubble sort visualization arena"></ol>
+		</section>
+
+		<section aria-labelledby="stats-heading">
+			<h2 id="stats-heading">Status and stats</h2>
+			<p id="status" role="status">Ready to sort.</p>
+			<dl class="stats">
+				<div><dt>Comparisons</dt><dd id="comparisons">0</dd></div>
+				<div><dt>Swaps</dt><dd id="swaps">0</dd></div>
+				<div><dt>Passes</dt><dd id="passes">0</dd></div>
+			</dl>
+		</section>
+	</main>
+
+	<footer>
+		<p>Bubble sort visualization</p>
+	</footer>
+</body>
+</html>
